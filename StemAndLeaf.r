@@ -1,0 +1,40 @@
+#LAB 14 
+
+#STEAM AND LEAF DIAGRAMS
+
+pulse=c(89,68,92,74,76,65,77,83,75,87,85,64,79,77,96,80,70,85,80,80,
+        82,81,86,71,90,87,71,72,62,78,77,90,83,81,73,80,78,81,81,75,
+        82,88,79,79,94,82,66,78,74,72)
+stem(pulse)
+#CHANGE SCALE 
+stem(pulse, scale = 0.5)
+stem(pulse, scale = 2)
+
+#BOXPLOTS
+boxplot(pulse)
+
+#AUTOMATIC SUMMARY OF DATA, THIS IS LIKE ONLINE CALCULATOR BUT BETTER
+summary(pulse)
+
+#OR EXTRACT INDIVIDUALLY
+mean(pulse)
+max(pulse)
+min(pulse)
+median(pulse) 
+
+#CALCULATE INTERQUARTILE RANGE
+IQR(pulse)
+
+#CALCULATE STANDARD QUANTILES
+quantile(pulse)
+
+#NUMBER OF QUANTILES CAN BE INCREASED, HERE EVERY 10 PER CENT
+quantile(pulse, probs=seq(0,1,0.1))
+
+#CALCULATE SAMPLE STANDARD DEVIATION (AUTOMATICALLY DOES FORMULA WITH (n-1))
+sd(pulse)
+
+
+#CALCULATE POPULATION STANDARD DEVIATION (WITH n IN FORMULA)
+sd(pulse)*sqrt(length(pulse)-1)/sqrt(length(pulse))
+
